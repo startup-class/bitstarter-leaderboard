@@ -136,7 +136,9 @@ module.exports = function(sequelize, DataTypes) {
 		*/
 		var _Order = this;
 		coinbase.get_coinbase_json(1, function(err, orders) {
+			if (orders) {
 		    _Order.addAllFromJSON(orders, cb);
+			}
 		});
 	    }
 	},

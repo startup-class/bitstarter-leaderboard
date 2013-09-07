@@ -42,7 +42,13 @@ var get_ncoinbase_page = function(init, cb) {
     request.get(coinbase_api_url(init), function(err, resp, body) {
         var orders_json = JSON.parse(body);
         console.log("Finished get_ncoinbase_page");
-        cb(null, orders_json.num_pages);
+        // Handle the errors
+        if (orders_json.error) {
+          console.log("Error: %s", orders_json.error);
+          cb(orders_json.error);
+        } else {
+          cb(null, orders_json.num_pages);
+        }
     });
 };
 
