@@ -46,12 +46,14 @@ following conceptual topics:
 - Server-side templating with [Embedded JS templates](http://embeddedjs.com/)
     ([1](https://github.com/startup-class/bitstarter-leaderboard/blob/master/routes.js#L42),
     [2](https://github.com/startup-class/bitstarter-leaderboard/blob/master/views/homepage.ejs),
-    [3](https://github.com/startup-class/bitstarter-leaderboard/blob/master/routes.js#L52),
+    [3](https://github.com/startup-class/bitstarter-leaderboard/blob/master/routes.js#L55),
     [4](https://github.com/startup-class/bitstarter-leaderboard/blob/master/views/orderpage.ejs))
 
 - Making a request to a remote API both on the server and in client-side code
-    ([1](https://github.com/startup-class/bitstarter-leaderboard/blob/master/models/order.js#L165),
-    [2](https://github.com/startup-class/bitstarter-leaderboard/blob/master/public/js/controllers.js#L18))
+    ([1](https://github.com/startup-class/bitstarter-leaderboard/blob/master/models/order.js#L138),
+    [2](https://github.com/startup-class/bitstarter-leaderboard/blob/master/models/coinbase.js#L42),
+    [3](https://github.com/startup-class/bitstarter-leaderboard/blob/master/models/coinbase.js#L54),
+    [4](https://github.com/startup-class/bitstarter-leaderboard/blob/master/public/js/controllers.js#L18))
 
 - Setting up a simple API
     ([1](https://github.com/startup-class/bitstarter-leaderboard/blob/master/routes.js#L61),
