@@ -1,0 +1,22 @@
+{
+  "name": "bitstarter-leaderboard",
+  "version": "0.0.1",
+  "description": "Bitcoin crowdfunder template suitable for leaderboard",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "sequelize": "~2.0.0-alpha2",
+    "pg": "~2.3.1",
+    "ejs": "~0.8.4",
+    "express": "~3.3.4",
+    "async": "~0.2.9",
+    "request": "~2.27.0",
+    "underscore": "~1.5.1"
+  },
+  "engines": {
+    "node": "0.10.12",
+    "npm": "1.2.30"
+  }
+}

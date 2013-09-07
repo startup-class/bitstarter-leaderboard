@@ -1,0 +1,127 @@
+/* Statically serve fonts directly to avoid this error in the Chrome console:
+     Resource interpreted as Font but transferred with MIME type font/woff: 
+     "https://themes.googleusercontent.com/static/fonts/ubuntu/v4/0ihfXUL2emPh0ROJezvraLO3LdcAZYWl9Si6vvxL-qU.woff".
+*/
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/opensans-300.woff) format('woff');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(../fonts/ubuntu-300.woff) format('woff');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url(../fonts/ubuntu-700.woff) format('woff');
+}
+
+/* Large desktop */
+@media (min-width: 980px) { 
+  body {
+   padding-top: 60px;
+  }
+ .linediv-l {
+   border-right: 1px white solid;
+  }
+ .linediv-r {
+   border-left: 1px white solid;
+ }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+ .copy {
+   padding: 2.5% 10%;
+ }
+ .linediv-l {
+   border-bottom: 1px white solid;
+ }
+ .linediv-r {
+   border-top: 1px white solid;
+ }
+}
+
+/* All form factors */
+
+/* Main body and headings */
+/* 
+  Use slightly lighter body font (Open Sans 300 rather than 400): 
+  https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight 
+
+  Also use slightly lighter subheading (Ubuntu 300 vs. 400)
+*/
+body{
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300; 
+}
+.heading, .subheading {
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+.subheading {
+  font-weight: 300;
+}
+p.lead {
+  padding-top: 1.5%;
+  font-size: 24px;
+  line-height: 30px;
+}
+p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* Video pitch and Action */
+.pitch {
+  padding: 2.5% 0%;
+}
+.order {
+  padding: 2% 0%;
+}
+.actions {
+  background-color: #343434;
+  padding: 3% 0%;
+}
+.video, .thermometer, .order, .social, .statistics {
+  text-align: center;
+}
+.statistics h3, .statistics p {
+  color: white;
+}
+.statistics p .currency {
+  font-size: 100%;
+  line-height: 1;
+}
+
+
+/* Marketing Copy and Footer */
+.copy {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  text-align: justify;
+}
+.asset {
+  padding: 2.5% 0%;
+}
+.footer {
+  color: #cccccc;
+  text-align: center;
+}
+.footer p {
+  font-size: 11px;
+}
+.footer a {
+  color: #ccccff;
+}
+
+/* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
+div.addthis_toolbox {
+width: 174px;
+margin: 0 auto;
+}
