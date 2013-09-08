@@ -1,6 +1,6 @@
 /* Statically serve fonts directly to avoid this error in the Chrome console:
-     Resource interpreted as Font but transferred with MIME type font/woff: 
-     "https://themes.googleusercontent.com/static/fonts/ubuntu/v4/0ihfXUL2emPh0ROJezvraLO3LdcAZYWl9Si6vvxL-qU.woff".
+  Resource interpreted as Font but transferred with MIME type font/woff: 
+  "https://themes.googleusercontent.com/static/fonts/ubuntu/v4/0ihfXUL2emPh0ROJezvraLO3LdcAZYWl9Si6vvxL-qU.woff".
 */
 @font-face {
   font-family: 'Open Sans';
@@ -22,29 +22,29 @@
 }
 
 /* Large desktop */
-@media (min-width: 980px) { 
+@media (min-width: 980px) {
   body {
-   padding-top: 60px;
+    padding-top: 60px;
   }
- .linediv-l {
-   border-right: 1px white solid;
+  .linediv-l {
+    border-right: 1px white solid;
   }
- .linediv-r {
-   border-left: 1px white solid;
- }
+  .linediv-r {
+    border-left: 1px white solid;
+  }
 }
 
 /* Landscape phones and down */
-@media (max-width: 480px) { 
- .copy {
-   padding: 2.5% 10%;
- }
- .linediv-l {
-   border-bottom: 1px white solid;
- }
- .linediv-r {
-   border-top: 1px white solid;
- }
+@media (max-width: 480px) {
+  .copy {
+    padding: 2.5% 10%;
+  }
+  .linediv-l {
+    border-bottom: 1px white solid;
+  }
+  .linediv-r {
+    border-top: 1px white solid;
+  }
 }
 
 /* All form factors */
@@ -56,7 +56,7 @@
 
   Also use slightly lighter subheading (Ubuntu 300 vs. 400)
 */
-body{
+body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300; 
 }
@@ -120,7 +120,7 @@ p {
   color: #ccccff;
 }
 
-/* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
+/* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */
 div.addthis_toolbox {
 width: 174px;
 margin: 0 auto;
