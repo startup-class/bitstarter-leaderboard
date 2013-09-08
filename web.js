@@ -86,33 +86,33 @@ app.use(express.favicon(path.join(__dirname, 'public/img/favicon.ico')));
 app.use(express.logger("dev"));
 
 for(var ii in ROUTES) {
-    app.get(ROUTES[ii].path, ROUTES[ii].fn);
+  app.get(ROUTES[ii].path, ROUTES[ii].fn);
 }
 
 global.db.sequelize.sync().complete(function(err) {
-    if (err) {
-	throw err;
-    } else {
-	var DB_REFRESH_INTERVAL_SECONDS = 600;
-	async.series([
-	    function(cb) {
-		// Mirror the orders before booting up the server
-		console.log("Initial mirror of Coinbase orders at " + new Date());
-		global.db.Order.refreshFromCoinbase(cb);
-	    },
-	    function(cb) {
-		// Begin listening for HTTP requests to Express app
-		http.createServer(app).listen(app.get('port'), function() {
-		    console.log("Listening on " + app.get('port'));
-		});
+  if (err) {
+    throw err;
+  } else {
+    var DB_REFRESH_INTERVAL_SECONDS = 600;
+    async.series([
+      function(cb) {
+        // Mirror the orders before booting up the server
+        console.log("Initial mirror of Coinbase orders at " + new Date());
+        global.db.Order.refreshFromCoinbase(cb);
+      },
+      function(cb) {
+        // Begin listening for HTTP requests to Express app
+        http.createServer(app).listen(app.get('port'), function() {
+          console.log("Listening on " + app.get('port'));
+        });
 
-		// Start a simple daemon to refresh Coinbase orders periodically
-		setInterval(function() {
-		    console.log("Refresh db at " + new Date());
-		    global.db.Order.refreshFromCoinbase(cb);
-		}, DB_REFRESH_INTERVAL_SECONDS*1000);
-		cb(null);
-	    }
-	]);
-    }
+        // Start a simple daemon to refresh Coinbase orders periodically
+        setInterval(function() {
+          console.log("Refresh db at " + new Date());
+          global.db.Order.refreshFromCoinbase(cb);
+        }, DB_REFRESH_INTERVAL_SECONDS*1000);
+        cb(null);
+      }
+    ]);
+  }
 });
