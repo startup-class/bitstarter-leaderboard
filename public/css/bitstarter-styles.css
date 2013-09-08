@@ -1,6 +1,6 @@
 /* Statically serve fonts directly to avoid this error in the Chrome console:
-     Resource interpreted as Font but transferred with MIME type font/woff: 
-     "https://themes.googleusercontent.com/static/fonts/ubuntu/v4/0ihfXUL2emPh0ROJezvraLO3LdcAZYWl9Si6vvxL-qU.woff".
+  Resource interpreted as Font but transferred with MIME type font/woff: 
+  "https://themes.googleusercontent.com/static/fonts/ubuntu/v4/0ihfXUL2emPh0ROJezvraLO3LdcAZYWl9Si6vvxL-qU.woff".
 */
 @font-face {
   font-family: 'Open Sans';
